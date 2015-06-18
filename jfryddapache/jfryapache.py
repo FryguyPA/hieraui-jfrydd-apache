@@ -10,11 +10,11 @@ class Jfryddapache(Form):
 	       'source_repo' not in form_data:
 	       valid = False
 	    if valid is Fale:
-	    	return "Missing Info!"
+	       return "Missing Info!"
 	    return True
 
 	def process(_self, form_data):
-		nodes = {}
+	    nodes = {}
 		hostname = form_data['hostname']
 		vhost = form_data['vhost']
 		nodes[hostname] = {}
@@ -24,4 +24,4 @@ class Jfryddapache(Form):
 		nodes[hostname]['jfrydd_apache::source_repo'] = form_data['source_repo']
 
 		return nodes
-		
+
